@@ -8,9 +8,10 @@ LDFLAGS = -L$(RDBASE)/lib -L$(BOOST)/lib
 LDLIBS = -lstdc++ -lRDKitGraphMol -lRDKitRDGeneral 
 # Targets and dependencies
 # Executable
-rdmol2: rdmol2.o 
+rdmol2: rdmol2.o smiles.o
 # Other targets
-rdmol2.o: rdmol2.cpp 
+rdmol2.o: rdmol2.cpp smiles.h
+smiles.o: smiles.cpp smiles.h
 clean:
 	rm rdmol2 *.o
 
