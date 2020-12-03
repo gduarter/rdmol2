@@ -20,11 +20,16 @@ int main(int argc, char *argv[]){
 
     std::string FILENAME = argv[1];
     std::ifstream file(FILENAME);
+    std::vector<std::string> smiles_strings {};
     if (file.is_open()){
         std::string line{};
         while (std::getline(file, line)){
-            std::cout << line << std::endl;
+            smiles_strings.push_back( line.substr(0, line.find(' ')) );
         }
+    }
+    // test: print smiles
+    for (unsigned int i = 0; i < smiles_strings.size(); ++i){
+        std::cout << smiles_strings[i] << std::endl;
     }
 
     return 0;
