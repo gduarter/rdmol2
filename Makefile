@@ -1,6 +1,8 @@
 # Control variables
-RDBASE = /export/home/gduarter/local/rdkit-Release_2019_09_1
-BOOST = /export/home/gduarter/local/boost
+#RDBASE = /export/home/gduarter/local/rdkit-Release_2019_09_1  # george.ams.sunysb.edu
+#BOOST = /export/home/gduarter/local/boost                     # george.ams.sunysb.edu
+RDBASE = /home/gduarter/local/rdkit-Release_2019_09_1
+BOOST = /home/gduarter/local/boost
 CXX = g++
 CXXFLAGS = -Wall -g #-std=c++11 
 CPPFLAGS = -I$(RDBASE)/Code -I$(RDBASE)/Extern -I$(BOOST)/include
